@@ -1,0 +1,38 @@
+# Dependency directories
+node_modules/
+android/app/build/
+
+# Android specific
+*.keystore
+*.jks
+*.properties
+android/.gradle/
+android/.idea/
+android/.DS_Store
+
+# iOS specific
+ios/.DS_Store
+ios/build/
+ios/Pods/
+*.xcworkspacedata
+*.xcuserdata
+
+# Misc
+*.log
+*.pid
+*.retry
+
+# Cache
+.cache/
+*.bak
+*.swp
+*.lock
+*.log
+*.bak
+*.swp
+*.lock
+
+# Yarn and npm
+yarn-error.log
+yarn.lock
+package-lock.json
