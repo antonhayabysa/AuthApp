@@ -57,32 +57,22 @@ lint: Run ESLint.
 start: Start the React Native server.
 test: Run tests using Jest.
 
-Архитектурный подход:
+Architectural approach:
 
-Навигация:
+Navigation:
 
-Используется библиотека @react-navigation для навигации между экранами.
-Навигационный контейнер настроен в компоненте App, и в нем определены стеки для разных экранов.
-Экраны:
+Uses @react-navigation library to navigate between screens. The navigation container is configured in the App component, and it defines stacks for different screens. Screens:
 
-Все экраны приложения находятся в папке screens.
-Каждый экран имеет свой собственный файл со стилями и компонентами.
-Навигация между экранами выполняется с использованием навигационных пропсов.
-Состояние:
+All application screens are located in the screens folder. Each screen has its own file with styles and components. Navigation between screens is done using navigation props. State:
 
-Для управления состоянием приложения используются локальное хранилище AsyncStorage и стейт-переменные внутри компонентов.
-Стили:
+To manage application state, local storage AsyncStorage and state variables inside components are used. Styles:
 
-Стили компонентов и экранов определены в файлах styles.js.
-Данные:
+Component and screen styles are defined in styles.js files. Data:
 
-Данные о сменах (shiftsData) хранятся локально внутри файла MyShiftsScreen.js. В реальном приложении они могут быть загружены с сервера.
-Управление видимостью:
+Shift data (shiftsData) is stored locally within the MyShiftsScreen.js file. In a real application they can be loaded from the server. Visibility control:
 
-Состояние видимости списка смен (isListVisible) хранится в локальном хранилище AsyncStorage. Оно используется для сохранения предпочтений пользователя между сессиями.
-Обработка событий:
+The visibility state of the shift list (isListVisible) is stored in local AsyncStorage. It is used to save user preferences between sessions. Event Handling:
 
-Все обработчики событий, такие как нажатие кнопок и обновление состояния, находятся внутри соответствующих компонентов.
-Структура проекта:
+All event handlers, such as button clicks and state updates, are contained within their respective components. Project structure:
 
-Проект имеет структуру с разделением на компоненты, стили, экраны и навигацию.
+The project has a structure divided into components, styles, screens and navigation.
