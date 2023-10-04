@@ -38,7 +38,9 @@ const CodeConfirmationScreen = ({ route }: { route: CodeConfirmationScreenRouteP
   }, [startTimer, timeLeft]);
 
   const handleCodeSubmit = async () => {
-    if (code === "1234") {
+    const isNumericCode = /^\d+$/.test(code);
+  
+    if (isNumericCode && code === "1234") {
       const currentTime = new Date().getTime();
       await AsyncStorage.setItem("authTime", currentTime.toString());
       navigation.navigate("MyShifts");
@@ -46,6 +48,7 @@ const CodeConfirmationScreen = ({ route }: { route: CodeConfirmationScreenRouteP
       setError(true);
     }
   };
+  
   
   return (
     <SafeAreaView style={styles.container}>
