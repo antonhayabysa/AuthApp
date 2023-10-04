@@ -4,8 +4,8 @@ android/app/build/
 
 # Android specific
 *.keystore
+!debug.keystore
 *.jks
-*.properties
 android/.gradle/
 android/.idea/
 android/.DS_Store
